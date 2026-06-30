@@ -1,0 +1,19 @@
+# Do not allow browsing indexes. (-Indexes)
+# MultiViews MUST be off for this thing to work right! (-MultiViews)
+# Includes allows using the common header/footer (etc) files.
+Options +FollowSymLinks +Includes -Indexes -MultiViews
+
+# Allow rewriting URLs
+RewriteEngine on
+
+# This allows SSI conditionals
+SSILegacyExprParser on
+
+# Process SSI in .html files
+AddHandler server-parsed .html
+
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+ </IfModule>
+</FilesMatch>
