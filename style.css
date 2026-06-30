@@ -10,7 +10,7 @@ html {
 }
 
 .nav-link {
-    text-decoration: none;
+    text-decoration-line: underline;
     color: black;
     font-size: 1.2rem;
     font-weight: bold;
@@ -144,6 +144,22 @@ header {
     height: 100%;
 }
 
+.book-text {
+    display: none;
+}
+
 #bio-text {
     display: block;
+}
+
+/* EMAIL OBFUSCATOR
+ * This is shown to block email address scraping.
+ * Based on http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/
+ *
+ * Use the following to list an email address:
+ <span class=email>info@<span>null</span>example.com</span>
+ */
+
+span.email span {
+    display:none;
 }

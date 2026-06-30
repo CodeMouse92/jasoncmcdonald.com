@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='en-US'>
 
 <head>
   <title>Jason C McDonald</title>
@@ -9,73 +9,148 @@
   <base target="_blank" />
 </head>
 
+<script>
+  function toggle(element) {
+    const elem = document.getElementById(element);
+    if (elem.style.display === "block") {
+      elem.style.display = "none";
+    } else {
+      elem.style.display = "block";
+    }
+  }
+</script>
+
 <body>
   <header>
     <div class="title">
       <h1>Jason C McDonald</h1>
-      <span> 
-        <a href="#bio" target="_self" class="nav-link">About</a> | 
-        <a href="https://ajcharlesonpublishing.com/books/" target="_self" class="nav-link">Store</a> | 
-        <a href="#podcasts" target="_self" class="nav-link">Podcasts</a>
-      </span>
+      <p>
+        Typewriter-Obsessed Author and Bow Tie Enthusiast
+      </p>
     </div>
   </header>
   <div>
     <div class="section">
-      <h2 class="section-title">Books</h2>
+      <h2 class="section-title">Fiction Books</h2>
       <div class="books">
-        <div class="book hoverable" id="finding-scrooge">
-          <a href="https://ajcharlesonpublishing.com/books/finding-scrooge">
-            <img src="resources/findingscrooge-cover.webp" alt="Finding Scrooge" />
-          </a>
+        <div class="book hoverable" id="beyond-the-bramble-thicket">
+          <img src="resources/beyondthebramblethicket-cover.webp" alt="Beyond the Bramble Thicket" onclick="toggle('bramble_thicket')"/>
         </div>
         <div class="book hoverable" id="noah-clue-1">
-          <a href="https://ajcharlesonpublishing.com/books/noah-clue-pi">
-            <img src="resources/noahcluepi-cover.jpg" alt="Noah Clue" />
-          </a>
+          <img src="resources/noahcluepi-cover.jpg" alt="Noah Clue, P.I." onclick="toggle('noah_clue')" />
         </div>
-        <div class="book hoverable" id="beyond-the-bramble-thicket">
-          <a href="https://ajcharlesonpublishing.com/books/beyond-the-bramble-thicket">
-            <img src="resources/beyondthebramblethicket-cover.webp" alt="Beyond the Bramble Thicket" />
-          </a>
+        <div class="book hoverable" id="finding-scrooge">
+          <img src="resources/findingscrooge-cover.webp" alt="Finding Scrooge" onclick="toggle('finding_scrooge')" />
         </div>
         <!-- <div class="book" id="book-id">
           <img src="cover_img" alt="book title" />
         </div> -->
       </div>
+      <div class="book-text" id="bramble_thicket">
+        <p>
+          "No self-respecting rabbit would go into the forest..."
+        </p>
+        <p>
+          That is what Papa Rabbit has said for all of Cottontip's life. Even so, a desperate
+          search for a cure drives this young rabbit buck into the forest, where he is befriended
+          by an exuberant young fox kit named May. It isn't long until their unlikely friendship
+          turns their community upside-down.
+        </p>
+        <p>
+          When a pack of wolves with no respect for the natural order jeopardize everything
+          Cottontip and May hold dear, they must rally their families and neighbors to stand
+          together and preserve their home.
+        </p>
+        <p>
+          Set in the untamed wilds of pre-Columbian central Minnesota, "Beyond the Bramble Thicket"
+          celebrates how the bonds of friendship, family, and community prevail over prejudice and fear.
+        </p>
+        <a href="https://ajcharlesonpublishing.com/books/beyond-the-bramble-thicket" class="nav-link">
+          Click here to learn more and purchase.
+        </a>
+      </div>
+      <div class="book-text" id="noah_clue">
+        <p>
+          Noah Clue is at a dead end, having just been fired by his latest client, when his cousin shows up with
+          an offer to help salvage his career. But what happens when an unobservant private investigator and a
+          fastidious legal secretary team up? They turn Seattle upside down!
+        </p>
+        <p>
+          Join Noah and Dee as they untangle four mind-twisting cases, brimming with hot coffee and fresh satire.
+        </p>
+        <p>
+          <em>"Jason C. McDonald's unique, quirky and entertaining writing style keeps the page turning and the reader
+          guessing. Noah Clue, P.I., is a character you won't soon forget, and you'll find yourself hoping that he
+          turns up in the next story you read. Highly recommended."</em> -Rene Gutteridge, Novelist and Screenwriter
+        </p>
+        <a href="https://ajcharlesonpublishing.com/books/noah-clue-pi" class="nav-link">
+          Click here to learn more and purchase.
+        </a>
+      </div>
+      <div class="book-text" id="finding_scrooge">
+        <p>
+          Bob Cratchit and Ebenezer Scrooge are busy preparing for their holiday celebration. Five years have
+          passed since Scrooge’s miraculous transformation, the strange circumstances of which no one could
+          ever quite account for.
+        </p>
+        <p>
+          But when Scrooge fails to make his annual appearance at Fred’s dinner party, everyone is alarmed. Nephew Fred, Bob Cratchit, his son Tim, and Martha Cratchit’s fiancé Daniel set out into the grip of a snowstorm to locate Mr. Scrooge. Their journey will take them right into one of the darkest slums of East London, as they discover what it truly means to Keep Christmas Well.
+        </p>
+        <p>
+          Peppered with original drawings by Samuel Morgainne Blight, Jason C. McDonald’s original sequel to
+          <em>A Christmas Carol</em> recaptures the whimsical voice of Charles Dickens, with a message that is as fresh
+          and relevant today as it was 175 years ago.
+        </p>
+        <p>
+          <em>"If you’ve ever wanted to know what happened to Scrooge, Tiny Tim et al after</em>A Christmas Carol
+          <em>, you can find out here! A lovely addition to the Christmas season, written by Jason C. McDonald."</em>
+          -Lucinda Dickens Hawksley, Author, Lecturer, Dickens Expert (Descendent)
+        </p>
+        <a href="https://ajcharlesonpublishing.com/books/finding-scrooge" class="nav-link">
+          Click here to learn more and purchase.
+        </a>
+      </div>
     </div>
     <div class="intermission" id="intermission1"></div>
     <div class="section" id="bio">
       <h2 class="section-title">About</h2>
-      <a href="https://codemouse92.com/">
-        <img src="resources/Feb2026_Typewriter.webp" id="bio-pic" class="hoverable" />
-      </a>
+      <img src="resources/Feb2026_Typewriter.webp" alt="typewriter keys" id="bio-pic" class="hoverable" />
       <div id="bio-text">
         <p>
-          Jason C McDonald does many things. Writing books is one of them (you can
-          see a few of them just
-          above) and existing outside of time and space, lending his unique abilities to the forces of good found
-          scattered
-          across and between the folds in the fabric of reality is another. He might not realize he does this, but he
-          does
-          it
-          nonetheless. Much of his energy is taken up in this pursuit, so if he seems tired or distracted at times
-          please
-          grant him some grace; he's probably rescuing a baby silulink. Despite all of this, Jason also manages to
-          contribute to many other good causes, like some of the podcasts listed below and various github repositories.
-          Should you meet him or his typewriter on the street, say hi, stay a while, and listen.
+          In the wild, Jason C. McDonald (<em>Homo anachronismus</em>) is generally found in coffee shops, often
+          in the presence of a typewriter, with whom it shares a symbiotic relationship. The species can often be
+          differentiated from the similar <em>H. sapiens</em> by the prominent tweed flat cap, bow tie, and
+          waistcoat, although this plumage may vary with season. While it grooms computer code for survival, it
+          prefers to collect ideas from its surroundings, and weave them with words into ornate fiction books that
+          are prized the world over for their intricate plots and compelling characters.
+        </p>
+        <p>
+          Other common habitats include forests, meadows, and suburban gardens in central Minnesota, often in the
+          company of large, enthusiastic members of the species <em>Canis familiaris</em>. Some legends suggest that
+          <em>H. anachronismus</em> is also capable of time travel, but these rumors are unsubstantiated.
+        </p>
+        <p>
+          While difficult to spot in the wild, you can contact by aiming a well-organized sequence of electrons
+          at <span class=email>code<span>writing</span>mouse<span>guy</span>92@<span>null</span>outlook.com</span>.
+          Further information about the computer code grooming behaviors of this species are documented at
+          <a href="https://codemouse92.com">codemouse92.com</a>
         </p>
       </div>
     </div>
     <div class="intermission" id="intermission2"></div>
     <div class="section" id="podcasts">
       <h2 class="section-title">Podcasts</h2>
-      <p>Jason has participated in a variety of podcasts including the ones listed below.</p>
+      Here are podcast appearances about me and my fiction work.
       <ul>
-        <li><a href="_" class="nav-link">Podcast Title</a>: Podcast Description</li>
-        <li><a href="_" class="nav-link">Podcast Title</a>: Podcast Description</li>
-        <li><a href="_" class="nav-link">Podcast Title</a>: Podcast Description</li>
+        <li>
+          <a href="https://corecursive.com/brain-injury-with-jason-mcdonald/" class="nav-link">
+            CoRecursive (Episode 96): Code as a Lifeline - Brain Injury Sparks Python Mastery
+          </a>
+        </li>
       </ul>
+      My tech podcast appearances can be found at <a href="https://codemouse92.com/speaker" class="nav-link">
+        codemouse92.com/speaker
+      </a>
     </div>
     <footer class="site-footer">
       <div class="social-links" aria-label="Social media links">
@@ -91,6 +166,7 @@
       </div>
       <span>Copyright &copy; 2026 Jason C McDonald. All Rights Reserved.</span>
     </footer>
+  </div>
 </body>
 
 </html>
